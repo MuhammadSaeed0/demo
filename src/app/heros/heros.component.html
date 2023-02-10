@@ -1,26 +1,6 @@
 <div class="d-flex justify-content-center">
   <div class='pt-2'>
-
-    <div class="mt-2">
-      <span>Name:</span>
-      <input type="text" class="form-control" [(ngModel)]="name">
-    </div>
-
-    <div class="mt-2">
-      <span>Age:</span>
-      <input type="text" class="form-control mt-2" [(ngModel)]="age">
-    </div>
-
-    <div class="mt-2">
-      <span>Gender:</span>
-      <select class="form-control" [(ngModel)]="gender">
-        <option [ngValue]="'Male'">Male</option>
-        <option [ngValue]="'Female'">Female</option>
-      </select>
-    </div>
-    <button class="btn btn-primary mt-2" [disabled] = "name === '' ? true : false"
-    (click)="onAddNewHero()">Add Hero</button>
-
+    <app-create-hero (heroAdded)="onHeroAdded($event)"></app-create-hero>
     <app-hero-item *ngFor="let hero of herosList" [heroData]="hero"></app-hero-item>
 
   </div>

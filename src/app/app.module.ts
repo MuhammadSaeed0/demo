@@ -1,3 +1,4 @@
+import { CreateHeroComponent } from './heros/create-hero/create-hero.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +12,8 @@ import { HeroItemComponent } from './heros/hero-item/hero-item.component';
   declarations: [
     AppComponent,
     HerosComponent,
-    HeroItemComponent
+    HeroItemComponent,
+    CreateHeroComponent
   ],
   imports: [
     BrowserModule,

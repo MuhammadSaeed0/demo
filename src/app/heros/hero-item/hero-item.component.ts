@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./hero-item.component.css']
 })
 export class HeroItemComponent implements OnInit {
-@Input() heroData:any
+@Input() heroData:heroModel ={heroName:'',heroAge:null,heroGender:'Male'}
   constructor() { }
 
   ngOnInit() {
