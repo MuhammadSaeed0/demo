@@ -1,8 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class='pt-2'>
     <app-create-hero (heroAdded)="onHeroAdded($event)"></app-create-hero>
-    <app-hero-item *ngFor="let hero of herosList" [heroData]="hero"></app-hero-item>
-
+    <app-hero-item *ngFor="let hero of herosList; let i = index" [heroIndex] = i [heroData]="hero"></app-hero-item>
   </div>
 </div>
 
